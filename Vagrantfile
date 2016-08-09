@@ -14,6 +14,8 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
 
+  config.ssh.forward_agent = true
+
   # config.vm.provision :shell, path: "provision.sh"
 
   config.vm.provision :chef_solo do |chef|

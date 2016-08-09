@@ -21,9 +21,7 @@ corto_repos = [
   ["cortoproject", "test", "6904a482b259d599f15c6228303ca00a568ee258"],
   ["cortoproject", "json", "0045469acf4102ea1ba2e3ed7b60eacb95d4a9c0"],
   ["cortoproject", "web", "0e7c37e0785df2d99717a2c1fb3fab5f59f0c93a"],
-  # Figure out how to clone private repos later
-  # ["jleeothon", "alfie"],
-  # ["jleeothon", "alfieapp"],
+  ["jleeothon", "corto-jinja", "ea839f5a0f0820743145fbb64cc776777c324ab2"],
 ]
 
 corto_repos.each do |repo|
