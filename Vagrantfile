@@ -17,12 +17,9 @@ Vagrant.configure(2) do |config|
   # config.vm.provision :shell, path: "provision.sh"
 
   config.vm.provision :chef_solo do |chef|
-
-    # without the following two lines,
     chef.channel = "stable"
-    # chef.version = '12.10.40'
-    chef.add_recipe "apt"
-    # chef.json = { :apache => { :default_site_enabled => true } }
+    chef.add_recipe "alfiecookbook"
+    chef.add_recipe "alfiecookbook::repos"
   end
 
   # Disable automatic box update checking. If you disable this, then
