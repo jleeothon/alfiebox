@@ -21,6 +21,7 @@ corto_repos = [
   ["cortoproject", "test", "6904a482b259d599f15c6228303ca00a568ee258"],
   ["cortoproject", "json", "0045469acf4102ea1ba2e3ed7b60eacb95d4a9c0"],
   ["cortoproject", "web", "0e7c37e0785df2d99717a2c1fb3fab5f59f0c93a"],
+  ["cortoproject", "postgresql", "28c36c2e13387f96904a8edc59da00eaf2f63940"],
   ["jleeothon", "corto-jinja", "ea839f5a0f0820743145fbb64cc776777c324ab2"],
 ]
 

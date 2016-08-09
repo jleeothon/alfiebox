@@ -8,6 +8,8 @@ COMPONENTS = %w(
   test
   json
   web
+  corto-jinja
+  postgresql
   alfie
 )
 
