@@ -11,6 +11,8 @@ apt_package 'libxml2-dev'
 apt_package 'curl'
 apt_package 'libffi6'
 apt_package 'libffi-dev'
+apt_package 'libcurl4-openssl-dev'
+apt_package 'libpq-dev'
 
 apt_package 'python3.4'
 apt_package 'python3-pip'
