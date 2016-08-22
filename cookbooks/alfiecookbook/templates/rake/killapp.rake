@@ -1,4 +1,4 @@
 
-task :appkill do
+task :killapp do
   sh "killall alfieapp"
 end

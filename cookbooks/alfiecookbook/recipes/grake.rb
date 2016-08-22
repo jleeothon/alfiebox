@@ -1,5 +1,5 @@
 
-rakefiles = %w(applist.rake appkill.rake psql.rake apprun.rake)
+rakefiles = %w(listapp.rake killapp.rake psql.rake runapp.rake)
 
 HOME = Dir.home("vagrant")
 

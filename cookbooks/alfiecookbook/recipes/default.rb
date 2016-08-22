@@ -30,13 +30,16 @@ end
 
 script "install-ruby2.2" do
   not_if do
-    `ruby -v`.strip.between? "ruby 2.2", "ruby2.3"
+    expected = %w(ruby2.2 ruby2.2-dev:amd64)
+    actual = `dpkg-query -W -f='${binary:Package}\n' ruby2.2*`.split
+    !(expected - actual).empty?
   end
   interpreter "bash"
   code <<-END
     apt-add-repository -y ppa:brightbox/ruby-ng
     apt-get update -y
     apt-get install -y ruby2.2
+    apt-get install -y ruby2.2-dev
   END
 end
 
@@ -63,5 +66,12 @@ script "install-postgresql" do
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     apt-get update -y
     apt-get install -y postgresql-9.5 # You may need --force-yes
+  END
+end
+
+script "set-postgres-password" do
+  interpreter "bash"
+  code <<-END
+    su -l postgres -c "psql -c \\"alter user postgres password 'password';\\""
   END
 end
