@@ -1,4 +1,6 @@
 
 task :runapp do
-  sh "nohup corto run alfieapp &"
+  sh <<-end
+    nohup corto run alfieapp >> $HOME/alfieapp.log 2>&1 &
+  end
 end
