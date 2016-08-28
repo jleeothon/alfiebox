@@ -23,6 +23,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "alfiecookbook"
     chef.add_recipe "alfiecookbook::repos"
     chef.add_recipe "alfiecookbook::grake"
+    chef.add_recipe "alfiecookbook::blog"
   end
 
   # Disable automatic box update checking. If you disable this, then
