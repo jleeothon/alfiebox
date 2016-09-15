@@ -1,4 +1,4 @@
 
 task :killapp do
-  sh "killall alfieapp"
+  sh "killall alfieapp -u `whoami`"
 end
